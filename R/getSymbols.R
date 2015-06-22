@@ -1083,7 +1083,7 @@ function(Symbols,env,return.class='xts',
          "&base_currency_0=", currency.pair[2],
          "&base_currency_1=&base_currency_2=&base_currency_3=&base_currency_4=&download=csv",
          sep="")
-         print oanda.URL
+         print(oanda.URL)
        download.file(oanda.URL, destfile=tmp, quiet=!verbose)
        fr <- read.csv(tmp, skip=4, as.is=TRUE, header=TRUE)
        fr[,1L] <- as.Date(fr[,1L], origin="1970-01-01")
